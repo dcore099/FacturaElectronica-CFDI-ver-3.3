@@ -6,7 +6,7 @@
 //
 
 
-package cfdi33;
+package mx.gob.seseqro.cfdi33;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -554,7 +554,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
+@XmlType(name = "", namespace = "http://www.sat.gob.mx/cfd/3", propOrder = {
     "cfdiRelacionados",
     "emisor",
     "receptor",
@@ -563,20 +563,20 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "complemento",
     "addenda"
 })
-@XmlRootElement(name = "Comprobante")
+@XmlRootElement(name = "Comprobante", namespace = "http://www.sat.gob.mx/cfd/3")
 public class Comprobante {
 
-    @XmlElement(name = "CfdiRelacionados")
+    @XmlElement(name = "CfdiRelacionados", namespace = "http://www.sat.gob.mx/cfd/3")
     protected Comprobante.CfdiRelacionados cfdiRelacionados;
-    @XmlElement(name = "Emisor", required = true)
+    @XmlElement(name = "Emisor", namespace = "http://www.sat.gob.mx/cfd/3", required = true)
     protected Comprobante.Emisor emisor;
-    @XmlElement(name = "Receptor", required = true)
+    @XmlElement(name = "Receptor", namespace = "http://www.sat.gob.mx/cfd/3", required = true)
     protected Comprobante.Receptor receptor;
-    @XmlElement(name = "Conceptos", required = true)
+    @XmlElement(name = "Conceptos", namespace = "http://www.sat.gob.mx/cfd/3", required = true)
     protected Comprobante.Conceptos conceptos;
-    @XmlElement(name = "Impuestos")
+    @XmlElement(name = "Impuestos", namespace = "http://www.sat.gob.mx/cfd/3")
     protected Comprobante.Impuestos impuestos;
-    @XmlElement(name = "Complemento")
+    @XmlElement(name = "Complemento", namespace = "http://www.sat.gob.mx/cfd/3")
     protected List<Comprobante.Complemento> complemento;
     @XmlElement(name = "Addenda")
     protected Comprobante.Addenda addenda;
@@ -1324,12 +1324,12 @@ public class Comprobante {
      * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
+    @XmlType(name = "", namespace = "http://www.sat.gob.mx/cfd/3", propOrder = {
         "cfdiRelacionado"
     })
     public static class CfdiRelacionados {
 
-        @XmlElement(name = "CfdiRelacionado", required = true)
+        @XmlElement(name = "CfdiRelacionado", namespace = "http://www.sat.gob.mx/cfd/3", required = true)
         protected List<Comprobante.CfdiRelacionados.CfdiRelacionado> cfdiRelacionado;
         @XmlAttribute(name = "TipoRelacion", required = true)
         protected String tipoRelacion;
@@ -1414,7 +1414,7 @@ public class Comprobante {
          * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
-        @XmlType(name = "")
+        @XmlType(name = "", namespace = "http://www.sat.gob.mx/cfd/3")
         public static class CfdiRelacionado {
 
             @XmlAttribute(name = "UUID", required = true)
@@ -1788,7 +1788,7 @@ public class Comprobante {
     })
     public static class Conceptos {
 
-        @XmlElement(name = "Concepto", required = true)
+        @XmlElement(name = "Concepto",namespace = "http://www.sat.gob.mx/cfd/3", required = true)
         protected List<Comprobante.Conceptos.Concepto> concepto;
 
         /**
@@ -3723,7 +3723,7 @@ public class Comprobante {
      * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "")
+    @XmlType(name = "", namespace = "http://www.sat.gob.mx/cfd/3")
     public static class Emisor {
 
         @XmlAttribute(name = "Rfc", required = true)

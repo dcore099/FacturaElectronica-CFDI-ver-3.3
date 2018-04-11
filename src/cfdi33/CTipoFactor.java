@@ -6,7 +6,7 @@
 //
 
 
-package cfdi33;
+package mx.gob.seseqro.cfdi33;
 
 import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlEnumValue;
